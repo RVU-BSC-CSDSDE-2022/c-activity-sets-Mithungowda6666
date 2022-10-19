@@ -1,17 +1,17 @@
 #include <stdio.h>
+void change(int *a, int *b, int *sum);
 
-int main()
-{
-  int a,b,add;
-  printf("Enter the first number\n");
-  scanf("%d",&a);
-  printf("enter the second number\n");
-  scanf("%d",&b);
-  sum(a,b,&add);
-  printf("%d\n",add);
+int main()  {
+  int a, b, sum;
+  printf("enter the first number");
+    scanf("%d",&a);
+    printf("enter the second number");
+    scanf("%d",&b);
+  return 0
 }
 
-int sum(int a,int b,int *add)
+void change(int *a, int *b, int *c);
 {
-  *add=a+b;
+  sum=a+b
+    return sum
 }
