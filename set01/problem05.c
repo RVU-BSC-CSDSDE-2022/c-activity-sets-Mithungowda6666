@@ -1,24 +1,34 @@
 #include <stdio.h>
+int input();
+int compare(int a, int b, int c);
+void output(int a, int b, int c, int largest);
 
-int main()  {
-  int x,y,z;
-  printf("print 3 numbers");
-  scanf("%d", &x);
-  scanf("%d",&y);
-  scanf("%d",&z);
- compare (  x, y,  z);
+int main(void)  {
+  int a, b, c, l;
+  a = input();
+  b = input();
+  c = input();
+  l = compare(a,b,c);
+  output(a,b,c,l);
+}
+int input()  {
+  int x;
+  printf("enter the number\n");
+  scanf("%d",&x);
+  return (x);
+}
+int compare(int a, int b, int c ) {
+  if(a>b) {return(a);}
+    else {
+  
+    if(b>c) {return(b);}
+    else{return(c);}
   }
+}
 
-int compare (int a, int b, int c)
+
+void output(int a, int b, int c, int largest)
 {
-  if(a>b & a>c)
-  {
-    printf("%d is the largest",a);
-  }
-  if(b>a & b>c){
-    printf("%d is the largest",b);
-  }
-  if(c>a & c>b){
-    printf("%d is the largest",c);
-  } 
-  }
+  printf("print largest of %d, %d and %d is %d", a, b, c ,largest);
+  
+}

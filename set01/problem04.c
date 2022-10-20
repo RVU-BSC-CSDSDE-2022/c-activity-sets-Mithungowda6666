@@ -1,17 +1,30 @@
 #include <stdio.h>
-void change(int *a, int *b, int *sum);
+void change(int a, int b, int *sum);
 
 int main()  {
   int a, b, sum;
-  printf("enter the first number");
-    scanf("%d",&a);
-    printf("enter the second number");
-    scanf("%d",&b);
-  return 0
+     a=input();
+     b=input();
+    add(a, b, &sum);
+    output(a,b,sum);
+  return 0;
 }
 
-void change(int *a, int *b, int *c);
+int input()
 {
-  sum=a+b
-    return sum
+ int n;
+ printf("Enter the number\n");
+ scanf("%d", &n);
+  return n;
+}
+
+void add(int a, int b, int *sum)
+{
+  *sum=a+b;
+}
+
+void output(int a, int b, int sum)
+{
+  printf("the sum of %d and %d is %d", a, b, sum);
+  
 }
