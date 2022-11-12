@@ -13,7 +13,7 @@ printf("enter the second number");
   
   }
 
-int sum_func(int a, int b)
+int sum_func(int a, int b, int sum)
 
 {sum=a+b;
   return sum;
