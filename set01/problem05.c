@@ -3,7 +3,8 @@ int input();
 int compare(int a, int b, int c);
 void output(int a, int b, int c, int largest);
 
-int main(void)  {
+int main(void)  
+{
   int a, b, c, l;
   a = input();
   b = input();
@@ -11,14 +12,16 @@ int main(void)  {
   l = compare(a,b,c);
   output(a,b,c,l);
 }
-int input()  {
+int input()  
+{
   int x;
   printf("enter the number\n");
   scanf("%d",&x);
   return (x);
 }
-int compare(int a, int b, int c ) {
-  if(a>b) {return(a);}
+int compare(int a, int b, int c ) 
+{
+    if(a>b) {return(a);}
     else {
   
     if(b>c) {return(b);}
