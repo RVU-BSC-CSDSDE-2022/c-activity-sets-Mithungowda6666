@@ -1,5 +1,5 @@
 #include <stdio.h>
-int sum_func(int a, int b, int sum);
+int add(int a, int b, int sum);
 
 int main(void)
 {
