@@ -10,7 +10,7 @@ int main()
   n=input_arry_size();
   int a[n];
   input_arry(n,a);
-  sum==sum_n_arry(n,a);
+  sum=sum_n_arry(n,a);
   output(n,a,sum);
   
 }
