@@ -1,13 +1,13 @@
 #include <stdio.h>
-void change(int a, int b, int *sum);
+void change(int r, int m, int *sum);
 
 int main()  
 {
-     int a, b, sum;
-     a=input();
-     b=input();
-     add(a, b, &sum);
-     output(a,b,sum);
+     int r, m, sum;
+     r=input();
+     m=input();
+     add(r, m, &sum);
+     output(r,m,sum);
      return 0;
 }
 
@@ -19,13 +19,13 @@ int input()
     return n;
 }
 
-void add(int a, int b, int *sum)
+void add(int r, int m, int *sum)
 {
-  *sum=a+b;
+  *sum=r+m;
 }
 
-void output(int a, int b, int sum)
+void output(int r, int m, int sum)
 {
-  printf("the sum of %d and %d is %d\n", a, b, sum);
+  printf("the sum of %d and %d is %d\n", r, m, sum);
   
 }
