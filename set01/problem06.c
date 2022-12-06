@@ -20,7 +20,6 @@ int main()
     scanf("%d", &x);
     return(x);
 }
-//ude && operator
    void compare(int a, int b, int c, int *largest) {
      if(a>b)
      {
