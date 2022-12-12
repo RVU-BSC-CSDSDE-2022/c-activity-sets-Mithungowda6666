@@ -31,5 +31,5 @@ float find_weight(float radius, float height, float length){
 void output(float radius, float height, float length, float weight){
   printf("The weight of the camel with radius: %f height:%f, length:%f is %f",radius,height,length,weight);
 }
-// to compile the program usegcc problem02.c -lm -o problem02//
+// to compile the program use gcc problem02.c -lm -o problem02//
 //to get the output use ./problem02//
