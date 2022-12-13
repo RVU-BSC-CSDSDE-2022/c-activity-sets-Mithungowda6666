@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 struct camel {
 	float radius, height, length,weight;
 };
@@ -9,17 +10,15 @@ void find_weight(Camel *c); //passing address variable
 void output(Camel c);
 
 int main() {
-  Camel.radius = Camel input();
-  Camel.height = Camel input();
-  Camel.length = Camel input();
-   find_weight(Camel *c);
-  output(Camel c);
-    return 0;
-  
+  Camel c;
+  c =  input();
+  find_weight(&c);
+  output(c);
+  return 0;
 }
 
 Camel input() {
-  float c;
+ Camel c;
   printf("Enter the value of Radius\n");
   scanf("%f",&c.radius);
   printf("Enter the value of Height\n");
@@ -29,9 +28,12 @@ Camel input() {
   return (c);
 }
 void find_weight(Camel *c){
-  
-  *c.weight = (pi*pow(Camel.radius,3)*sqrt(Camel.height * Camel.length));
+  float pi;
+  pi= 3.14;
+  c->weight = (pi*pow(c->radius,3)*sqrt(c->height * c->length));
 }
 void output(Camel c) {
-  printf("The weight of the camel with radius: %f, height: %f, length: %f is %f",Camel.radius,Camel.lenght,Camel.height,*c.weight);
+  printf("The weight of the camel with radius: %f, height: %f, length: %f is %f",c.radius,c.length,c.height,c.weight);
 }
+
+// to run the program use gcc problem03.c -lm //
