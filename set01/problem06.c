@@ -20,18 +20,30 @@ int main()
     scanf("%d", &x);
     return(x);
 }
-   void compare(int a, int b, int c, int *largest) {
+void compare(int a, int b, int c, int *largest) 
+{
      if(a>b)
      {
-      if (a>=b && a>=c){*largest = a;}
-      else{*largest = c;}
+      if (a>c)
+      {
+        *largest = a;
+      }
+      else{
+        *largest = c;
+      }
      }
      else
      {
-       if(b>=a && b>=c){*largest = b;}
-       else{*largest = c;}
+       if(b>a && b>=c)
+      {
+         *largest = b;
+      }
+       else
+      {
+         *largest = c;
+      }
        }
-        }
+      }
      void output(int a, int b, int c, int largest){
        printf("the largest of %d,%d and %d is %d.",a,b,c,largest);
      }
