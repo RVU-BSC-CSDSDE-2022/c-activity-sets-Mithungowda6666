@@ -28,13 +28,14 @@ void compare(int a, int b, int c, int *largest)
       {
         *largest = a;
       }
-      else{
+      else
+      {
         *largest = c;
       }
      }
      else
-     {
-       if(b>a && b>=c)
+    {
+       if(b>a && b>c)
       {
          *largest = b;
       }
@@ -42,9 +43,10 @@ void compare(int a, int b, int c, int *largest)
       {
          *largest = c;
       }
-       }
-      }
-     void output(int a, int b, int c, int largest){
+    }
+}
+     void output(int a, int b, int c, int largest)
+   {
        printf("the largest of %d,%d and %d is %d.",a,b,c,largest);
-     }
+    }
    
