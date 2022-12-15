@@ -1,53 +1,51 @@
 #include<stdio.h>
+#include<stdlib.h>
 void input_camel_details(float *radius, float *height, float *length);
-int find_mood(float radius, float height, float length)
+int find_mood(float radius, float height, float length);
 void output(float radius, float height, float length, int mood);
 
-int main() {
-  int a;
+int main(){
+   float radius,height,length,mood;
    input_camel(&radius,&height,&length);
-   a = find_mood(radius,height,length);
+   mood = find_mood(radius,height,length);
    output(radius,height,length,mood);
    return  0;
   }
 
-void input_camel(float *radius, float *height, float *length) {
-  printf("Enter the value of the radius");
-  scanf("%f",&radius);
-  printf("Enter the value of the height");
-  scanf("%f",&height);
-  printf("Enter the value of the length");
-  scanf("%f",&lenght);
+void input_camel(float *radius, float *height, float *length){
+  printf("Enter the value of the radius :\n");
+  scanf("%f", radius);
+  printf("Enter the value of the height :\n");
+  scanf("%f", height);
+  printf("Enter the value of the length :\n");
+  scanf("%f", length);
 }
-int find_mood(float radius, float height, float length) { 
-  int a;
-  
+int find_mood(float radius, float height, float length){ 
   if((radius<height) && (radius<length))
   {
-    return 1;
+    return(1);
   }
-  if((height<radius) && (height<lenght))
+ else if((height<radius) && (height<length))
   {
-    return 2;
+    return(2);
   }
-  if((lenght<height) && (length<radius))
+  else
   {
-    return 3;
+    return(3);
   }
-  return a;
 }
-void output(float radius, float height, float length, int mood) {
+
+void output(float radius, float height, float length, int mood){
   if(mood==1) 
   {
     printf("the Camel is Sick");
   }
-  if(mood==2)
+   else if(mood==2)
   {
     printf("the Camel is Happy");
   }
-  if(mood==3)
+  else
   {
     printf("The Camel is Tense");
   }
 }
-
