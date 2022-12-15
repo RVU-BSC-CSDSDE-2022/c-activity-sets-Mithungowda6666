@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 int input();
 int compare(int a, int b, int c);
 void output(int a, int b, int c, int largest);
@@ -16,7 +17,11 @@ int input()
 {
   int x;
   printf("enter the number\n");
-  scanf("%d",&x);
+  if(scanf("%d",&x)!=1)
+  {
+    printf("error");
+    exit(0);
+  }
   return (x);
 }
 //Use && operator
