@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
  int input_arry_size();
 void input_arry(int n, int a[n]);
 int sum_n_arry(int n, int a[n]);
@@ -19,7 +20,11 @@ int input_arry_size()
 {
   int a;
   printf("Enter the size of the Array\n");
-    scanf("%d", &a);
+    if(scanf("%d", &a)!=1)
+    {
+      printf("error");
+      exit(0);
+    }
   return(a);
 }
 
@@ -29,7 +34,11 @@ void input_arry(int n, int a[n])
   printf("Enter the number\n");
   for(i = 0;i<n;i++)
     {
-    scanf("%d", &a[i]);
+    if(scanf("%d", &a[i])!=1)
+    {
+      printf("error");
+      exit(0);
+    }
     }
 }
 
