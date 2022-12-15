@@ -1,5 +1,8 @@
 #include <stdio.h>
-void change(int r, int m, int *sum);
+#include<stdlib.h>
+int input();
+void add(int r, int m, int *sum);
+void output(int r, int m, int sum);
 
 int main()  
 {
@@ -15,7 +18,11 @@ int input()
 {
     int n;
     printf("Enter the number\n");
-    scanf("%d", &n);
+    if(scanf("%d", &n)!=1)
+    {
+      printf("error");
+      exit(0);
+    }
     return n;
 }
 
