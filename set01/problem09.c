@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include<stdlib.h>
 double input();
 double square_root(double n);
 void output(double n, double sqrroot);
@@ -12,14 +13,17 @@ int main(){
 
 double input(){
   double a;
-  printf("Enter a number");
-  scanf("%lf", &a);
+  printf("Enter a number\n");
+  if(scanf("%lf", &a)!=1)
+  {
+    printf("error");
+    exit(0);
+  }
   return(a);
 }
 
 double square_root(double n){
-  float x,y;
-  x = sqrt(n);//babylonian 
+  //babylonian 
   float x = n;
     float y = 1;
     while (x - y ) {
