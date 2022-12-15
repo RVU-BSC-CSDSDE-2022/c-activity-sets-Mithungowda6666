@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 struct complex {
 	int real;
 	int img;
@@ -20,7 +21,11 @@ int main(){
 Complex input_complex(){
   Complex a;
   printf("Enter a and b where a + ib is the first complex number.\n");
-   scanf("%d%d", &a.real, &a.img);
+   if(scanf("%d%d", &a.real, &a.img)!=1)
+   {
+     printf("error");
+     exit(0);
+   }
   return(a);
 }
 
