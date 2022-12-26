@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include <stdlib.h>
 struct complex {
+
+
+
 	int real,img;
 };
 typedef struct complex Complex;
