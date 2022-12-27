@@ -5,6 +5,15 @@ void output(int res);
 
 void input( char *name) {
   printf("enter the name");
-  scanf("%c",)
+  if(scanf("%c",name)!=1)
+  {
+    printf("Error");
+    exit(0);
+  }
 }
+int has_nice_name(char *c) {
+  int c;
 
+    
+  }
+}
